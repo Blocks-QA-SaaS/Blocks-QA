@@ -2553,6 +2553,41 @@ a[href^="https://wa.me/"]:hover {
     border-color: #a000a0
 }
 
+.footer-brand-grid {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between
+}
+
+.footer-brand-grid a {
+    padding-inline: .75rem;
+    text-align: center;
+    justify-self: start
+}
+
+.footer-brand-grid a:nth-child(even) {
+    justify-self: end
+}
+
+@media (max-width: 360px) {
+    .footer-brand-grid a {
+        padding-inline: .6rem;
+        font-size: .75rem
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-brand-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        justify-content: stretch
+    }
+
+    .footer-brand-grid a,
+    .footer-brand-grid a:nth-child(even) {
+        padding-inline: 1rem;
+        justify-self: stretch
+    }
+}
+
 .contact-service-card {
     transition: transform .25s ease,border-color .25s ease,box-shadow .25s ease
 }
@@ -2663,14 +2698,26 @@ a[href^="https://wa.me/"]:hover {
 /* Free vulnerability assessment */
 .assessment-section {
     background: radial-gradient(circle at 16% 18%, rgba(128,0,128,.07), transparent 32%), #11161b;
-    padding: 4rem max(1.5rem, calc((100vw - 92rem)/2))
+    padding: 4rem 0
 }
 
 .assessment-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(32rem, 1.05fr);
     gap: 2.5rem;
-    align-items: center
+    align-items: center;
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1rem
+}
+
+@media (min-width: 640px) {
+    .assessment-layout { padding-inline: 1.5rem }
+}
+
+@media (min-width: 1024px) {
+    .assessment-layout { padding-inline: 2rem }
 }
 
 .assessment-eyebrow {
@@ -2777,7 +2824,7 @@ a[href^="https://wa.me/"]:hover {
 }
 
 @media (max-width: 640px) {
-    .assessment-section { padding: 3.5rem 1rem }
+    .assessment-section { padding-block: 3.5rem }
     .assessment-benefits { grid-template-columns: repeat(2, 1fr); row-gap: 1.25rem }
     .assessment-benefits p:nth-child(3) { border-left: 0; padding-left: 0 }
     .assessment-card-body { grid-template-columns: 1fr }
@@ -3355,11 +3402,17 @@ body.menu-open {
 }
 
 /* Company card hover animation */
+:root,
+.__variable_8b3a0b {
+    --font-body: Inter, Arial, ui-sans-serif, system-ui, sans-serif;
+    --font-heading: Inter, Arial, ui-sans-serif, system-ui, sans-serif
+}
+
 .site-loader {
     position: fixed;
     inset: 0;
     z-index: 9999;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -3368,6 +3421,10 @@ body.menu-open {
     opacity: 1;
     visibility: visible;
     transition: opacity .55s ease, visibility .55s ease
+}
+
+.js .site-loader {
+    display: flex
 }
 
 .site-loader.is-hidden {
