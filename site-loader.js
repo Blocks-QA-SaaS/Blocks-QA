@@ -7,11 +7,11 @@
     const hideLoader = () => {
         if (hideScheduled) return;
         hideScheduled = true;
-        const minimumDisplayTime = 700;
+        const minimumDisplayTime = 1200;
         const delay = Math.max(0, minimumDisplayTime - (performance.now() - startedAt));
         window.setTimeout(() => {
             loader.classList.add("is-hidden");
-            window.setTimeout(() => loader.remove(), 600);
+            window.setTimeout(() => loader.remove(), 500);
         }, delay);
     };
 
