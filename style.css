@@ -3614,6 +3614,18 @@ body.menu-open {
         background: rgba(17,22,27,.64)
     }
 
+    /* Keep the hero label below the fixed mobile header and inside narrow screens. */
+    .site-hero {
+        padding-top: 8.5rem
+    }
+
+    .hero-brand-word {
+        max-width: 100%;
+        font-size: clamp(1.5rem, 7.5vw, 1.875rem);
+        letter-spacing: clamp(.42em, 3.4vw, .7em);
+        white-space: nowrap
+    }
+
     .hero-background {
         object-position: center 62%;
         transform: scale(1.24)
