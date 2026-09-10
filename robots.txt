@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blocks-qa-saas.github.io/Blocks-QA/sitemap.xml
+Sitemap: https://blocks-qa.in/sitemap.xml

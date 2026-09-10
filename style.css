@@ -2418,6 +2418,24 @@ body {
     overflow-x: hidden
 }
 
+.skip-link {
+    position: fixed;
+    z-index: 1000;
+    top: .75rem;
+    left: .75rem;
+    padding: .75rem 1rem;
+    color: #11161b;
+    background: #fff;
+    border-radius: .375rem;
+    font-weight: 700;
+    transform: translateY(-160%);
+    transition: transform .2s ease
+}
+
+.skip-link:focus {
+    transform: translateY(0)
+}
+
 ::selection {
     color: var(--color-black);
     background: #2a3d5c2e
