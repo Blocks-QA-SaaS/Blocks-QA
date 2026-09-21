@@ -2626,18 +2626,13 @@ a[href^="https://wa.me/"]:hover {
 
 #companies .company-card .company-card-logo img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: 3rem;
+    max-width: 100%;
     object-fit: contain;
     object-position: left center;
     mix-blend-mode: normal;
     filter: none
-}
-
-#companies .company-card .company-card-logo a img {
-    width: auto;
-    height: 3rem;
-    max-width: 100%
 }
 
 #companies .company-card h3 .accent-purple {
