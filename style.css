@@ -2560,14 +2560,110 @@ a[href^="https://wa.me/"]:hover {
     z-index: 2;
     display: flex;
     flex-direction: column;
-    background-color: #1a1f24
+    min-height: 17.5rem;
+    overflow: hidden;
+    isolation: isolate;
+    border-color: color-mix(in srgb,var(--company-accent,#800080) 58%,transparent);
+    background: linear-gradient(135deg,rgba(8,14,21,.94),rgba(15,24,32,.78));
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.05),0 16px 35px rgba(0,0,0,.24);
+    --company-accent: #25c8ff
+}
+
+#companies .company-card:before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: radial-gradient(circle at 0 0,color-mix(in srgb,var(--company-accent) 18%,transparent),transparent 55%);
+    content: "";
+    pointer-events: none
+}
+
+#companies .company-card:nth-child(2) {
+    --company-accent: #c78b67
+}
+
+#companies .company-card:nth-child(3) {
+    --company-accent: #e0b93f
+}
+
+#companies .company-card:nth-child(4) {
+    --company-accent: #b45cff
+}
+
+#companies .company-card:nth-child(5) {
+    --company-accent: #c98a52
+}
+
+#companies .company-card .accent-purple-bg {
+    width: 2rem;
+    height: .22rem;
+    border-radius: 999px;
+    background-color: var(--company-accent);
+    box-shadow: 0 0 14px color-mix(in srgb,var(--company-accent) 65%,transparent)
+}
+
+#companies .company-card h3 {
+    letter-spacing: .015em
+}
+
+#companies .company-card .company-card-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: min(100%,10.5rem);
+    height: 4.25rem;
+    margin-top: 1.25rem;
+    overflow: visible
+}
+
+#companies .company-card .company-card-logo a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%
+}
+
+#companies .company-card .company-card-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+    mix-blend-mode: normal;
+    filter: none
+}
+
+#companies .company-card .company-card-logo a img {
+    width: auto;
+    height: 3rem;
+    max-width: 100%
 }
 
 #companies .company-card h3 .accent-purple {
-    display: inline-block;
-    font-size: 1.6em;
-    line-height: .8;
-    vertical-align: -.04em
+    color: var(--company-accent)
+}
+
+#companies .company-card > p:nth-of-type(1) {
+    color: color-mix(in srgb,var(--company-accent) 78%,white)
+}
+
+#companies .company-card .company-email {
+    margin-top: auto;
+    padding-top: 1.25rem;
+    color: color-mix(in srgb,var(--company-accent) 76%,white)
+}
+
+#companies .company-card .company-email-icon {
+    flex: 0 0 auto
+}
+
+@media (hover:hover) and (pointer:fine) {
+    #companies .company-card:hover,
+    #companies .company-card:focus-within {
+        border-color: var(--company-accent);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.08),0 20px 42px rgba(0,0,0,.3),0 0 26px color-mix(in srgb,var(--company-accent) 22%,transparent)
+    }
 }
 
 .company-email {
