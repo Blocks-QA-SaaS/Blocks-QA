@@ -2627,7 +2627,7 @@ a[href^="https://wa.me/"]:hover {
 #companies .company-card .company-card-logo img {
     display: block;
     width: auto;
-    height: 3rem;
+    height: 3.5rem;
     max-width: 100%;
     object-fit: contain;
     object-position: left center;
