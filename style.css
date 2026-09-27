@@ -2555,6 +2555,24 @@ a[href^="https://wa.me/"]:hover {
     height: 100%
 }
 
+@media (min-width: 1024px) {
+    #companies .company-grid {
+        grid-template-columns: repeat(6,minmax(0,1fr))
+    }
+
+    #companies .company-grid > .company-card {
+        grid-column: span 2
+    }
+
+    #companies .company-grid > .company-card:nth-child(4) {
+        grid-column: 2 / span 2
+    }
+
+    #companies .company-grid > .company-card:nth-child(5) {
+        grid-column: 4 / span 2
+    }
+}
+
 #companies .company-card {
     position: relative;
     z-index: 2;
@@ -2579,7 +2597,8 @@ a[href^="https://wa.me/"]:hover {
 }
 
 #companies .company-card:nth-child(2) {
-    --company-accent: #c78b67
+    --company-accent: #b45cff;
+    background: linear-gradient(135deg,rgba(20,8,29,.94),rgba(30,15,42,.78))
 }
 
 #companies .company-card:nth-child(3) {
