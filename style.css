@@ -2587,7 +2587,8 @@ a[href^="https://wa.me/"]:hover {
 }
 
 #companies .company-card:nth-child(4) {
-    --company-accent: #b45cff
+    --company-accent: #65e52b;
+    background: linear-gradient(135deg,rgba(8,21,10,.94),rgba(15,32,18,.78))
 }
 
 #companies .company-card:nth-child(5) {
@@ -2610,8 +2611,9 @@ a[href^="https://wa.me/"]:hover {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: min(100%,10.5rem);
-    height: 4.25rem;
+    width: min(100%,7.5rem);
+    height: 5rem;
+    flex-shrink: 0;
     margin-top: 1.25rem;
     overflow: visible
 }
@@ -2626,8 +2628,8 @@ a[href^="https://wa.me/"]:hover {
 
 #companies .company-card .company-card-logo img {
     display: block;
-    width: auto;
-    height: 3.5rem;
+    width: 100%;
+    height: 100%;
     max-width: 100%;
     object-fit: contain;
     object-position: left center;
